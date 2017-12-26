@@ -1,0 +1,45 @@
+.c-checkbox {
+  @include inuit-hidden-visually();
+
+  &:checked + span {
+    &:before {
+      opacity: 1;
+    }
+
+    i {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.c-checkbox + span {
+  @include inuit-font-size(14px, 18px);
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  letter-spacing: 1.75px;
+  margin-bottom: 40px;
+  position: relative;
+  vertical-align: middle;
+
+  &:before {
+    border: 2px solid #000;
+    content: '';
+    flex: 0 0 30px;
+    float: left;
+    height: 30px;
+    margin-right: 20px;
+    opacity: 1;
+  }
+
+  i {
+    @include inuit-font-size(20px, 20px);
+    left: 5px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    transform: scale(0);
+    transition: $global-transition;
+  }
+}

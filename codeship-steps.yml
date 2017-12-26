@@ -1,0 +1,2 @@
+- service: awsdeployment
+  command: aws s3 cp /deploy/public s3://static-deploy-test

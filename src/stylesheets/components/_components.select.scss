@@ -1,0 +1,11 @@
+.c-select {
+  position: relative;
+
+  i {
+    @include inuit-font-size(30px, 45px);
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+}
