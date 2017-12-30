@@ -4,8 +4,8 @@
 
 - name: list files
   service: awsdeployment
-  command: ls -la /app/public
+  command: ls -la /app
 
-- name: deploy
-  service: awsdeployment
-  command: aws s3 sync /app/public s3://static-deploy-test
+# - name: deploy
+#   service: awsdeployment
+#   command: aws s3 sync /app/public s3://static-deploy-test
