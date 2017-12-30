@@ -1,6 +1,10 @@
-- name: build
+- name: setup
   service: app
   command: yarn
+
+- name: build
+  service: app
+  command: yarn blendid build
 
 - name: list build files
   service: app
