@@ -2,6 +2,10 @@
   service: app
   command: true
 
+- name: list build files
+  service: app
+  command: ls -la /app
+
 - name: list files
   service: awsdeployment
   command: ls -la /app
