@@ -1,10 +1,6 @@
-# - name: setup
-#   service: app
-#   command: yarn
-
 - name: build
   service: app
-  command: echo test
+  command: yarn blendid build
 
 - name: deploy
   service: awsdeployment

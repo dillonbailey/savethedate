@@ -3,10 +3,14 @@ FROM mhart/alpine-node:9.3.0
 # RUN mkdir /tmp/gulp-starter/
 # RUN touch /tmp/gulp-starter/rev-manifest.json
 
+# Create app directory
 WORKDIR /app
-COPY package.json yarn.lock ./
+
+# Install app dependencies
+COPY package.json ./
+
 RUN yarn
-# RUN yarn blendid build
-# RUN yarn blendid build
-EXPOSE 3000
-CMD ["yarn", "blendid"]
+RUN npm rebuild node-sass
+
+# Bundle app src
+COPY . .
