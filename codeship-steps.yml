@@ -1,2 +1,11 @@
-- service: awsdeployment
-  command: aws s3 cp /deploy/public s3://static-deploy-test
+# - name: setup
+#   service: app
+#   command: yarn
+
+- name: build
+  service: app
+  command: echo test
+
+- name: deploy
+  service: awsdeployment
+  command: aws s3 sync /app/public s3://static-deploy-test

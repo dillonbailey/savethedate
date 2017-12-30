@@ -1,20 +1,12 @@
-# base on latest ruby base image
-FROM node:8.9.3-alpine
+FROM mhart/alpine-node:9.3.0
 
-# setup app folders
-RUN mkdir /app
+# RUN mkdir /tmp/gulp-starter/
+# RUN touch /tmp/gulp-starter/rev-manifest.json
+
 WORKDIR /app
-
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-
+COPY package.json yarn.lock ./
 RUN yarn
-RUN yarn build
-# If you are building your code for production
-# RUN npm install --only=production
-
-
-# Bundle app source
-COPY . .
+# RUN yarn blendid build
+# RUN yarn blendid build
+EXPOSE 3000
+CMD ["yarn", "blendid"]

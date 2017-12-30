@@ -1,7 +1,14 @@
-awsdeployment:
-  image: codeship/aws-deployment
-  encrypted_env_file: env.encrypted
-  environment:
-    - AWS_DEFAULT_REGION=ap-southeast-2
-  volumes:
-    - ./:/deploy
+services:
+  app:
+    build:
+      Dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+  awsdeployment:
+    image: codeship/aws-deployment
+    encrypted_env_file: env.encrypted
+    environment:
+      - AWS_DEFAULT_REGION=ap-southeast-2
+    volumes:
+      - ./codeship/steps:/codeship/steps
+      - ./:/app
