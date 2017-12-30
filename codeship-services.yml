@@ -1,7 +1,8 @@
 services:
   app:
     build:
-      Dockerfile: Dockerfile
+      dockerfile: Dockerfile
+      working_dir: /app
     volumes:
       - ./:/app
   awsdeployment:
@@ -10,5 +11,4 @@ services:
     environment:
       - AWS_DEFAULT_REGION=ap-southeast-2
     volumes:
-      - ./codeship/steps:/codeship/steps
       - ./:/app
