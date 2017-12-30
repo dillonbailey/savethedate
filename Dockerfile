@@ -4,11 +4,8 @@ FROM mhart/alpine-node:9.3.0
 WORKDIR /app
 
 # Install app dependencies
-COPY package.json ./
-
+COPY package.json .
 RUN yarn
 
 # Bundle app src
-COPY . .
-
-RUN yarn blendid build
+# COPY . .

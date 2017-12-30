@@ -3,12 +3,16 @@ services:
     build:
       image: app
       dockerfile: Dockerfile
-    volumes:
-      - ./:/app
+    volumes_from:
+      - data
   awsdeployment:
     image: codeship/aws-deployment
     encrypted_env_file: env.encrypted
     environment:
       - AWS_DEFAULT_REGION=ap-southeast-2
     volumes_from:
-      - app
+      - data
+  data:
+    image: busybox
+    volumes:
+      - .:/app

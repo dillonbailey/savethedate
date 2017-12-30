@@ -1,14 +1,14 @@
 - name: build
   service: app
-  command: true
+  command: yarn
 
 - name: list build files
   service: app
-  command: ls -la /app
+  command: ls -la
 
-- name: list files
-  service: awsdeployment
-  command: ls -la /app
+# - name: list files
+#   service: awsdeployment
+#   command: ls -la
 
 # - name: deploy
 #   service: awsdeployment
