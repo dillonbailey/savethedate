@@ -1,6 +1,6 @@
 - name: build
   service: app
-  command: echo test
+  command: true
 
 - name: deploy
   service: awsdeployment
