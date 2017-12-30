@@ -1,6 +1,7 @@
 services:
   app:
     build:
+      image: app
       dockerfile: Dockerfile
     volumes:
       - ./:/app
@@ -9,5 +10,5 @@ services:
     encrypted_env_file: env.encrypted
     environment:
       - AWS_DEFAULT_REGION=ap-southeast-2
-    volumes:
-      - ./:/app
+    volumes_from:
+      - app
