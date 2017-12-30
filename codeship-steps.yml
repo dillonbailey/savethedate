@@ -4,4 +4,5 @@
 
 - name: deploy
   service: awsdeployment
-  command: aws s3 sync /app/public s3://static-deploy-test
+  # command: aws s3 sync /app/public s3://static-deploy-test
+  command: ls -la
