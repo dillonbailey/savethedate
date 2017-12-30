@@ -8,7 +8,7 @@
 
 - name: list files
   service: awsdeployment
-  command: ls -la
+  command: ls -la /app
 
 # - name: deploy
 #   service: awsdeployment
