@@ -10,3 +10,5 @@ RUN yarn
 
 # Bundle app src
 COPY . .
+
+RUN yarn blendid build

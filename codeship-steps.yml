@@ -1,6 +1,6 @@
 - name: build
   service: app
-  command: yarn blendid build
+  command: echo test
 
 - name: deploy
   service: awsdeployment
