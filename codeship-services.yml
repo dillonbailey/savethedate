@@ -1,7 +1,6 @@
 services:
   app:
     build:
-      image: app
       dockerfile: Dockerfile
     volumes_from:
       - data

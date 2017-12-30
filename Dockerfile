@@ -8,4 +8,6 @@ COPY package.json .
 RUN yarn
 
 # Bundle app src
-# COPY . .
+COPY . .
+
+RUN yarn blendid build

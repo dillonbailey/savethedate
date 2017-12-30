@@ -1,18 +1,18 @@
 - name: setup
   service: app
-  command: yarn
+  command: true
 
-- name: build
-  service: app
-  command: yarn blendid build
+# - name: build
+#   service: app
+#   command: yarn blendid build
 
-- name: list build files
-  service: app
-  command: ls -la
+# - name: list build files
+#   service: app
+#   command: ls -la
 
-- name: list files
-  service: awsdeployment
-  command: ls -la /app
+# - name: list files
+#   service: awsdeployment
+#   command: ls -la /app
 
 - name: deploy
   service: awsdeployment
