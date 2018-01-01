@@ -10,6 +10,5 @@ RUN yarn
 # Bundle app src
 COPY . .
 
-# whether or not we run this here, we still have to run it in
-# codeship-steps.yml, otherwise it will not persist?
-# RUN yarn blendid build
+# Build deploy directory
+RUN yarn blendid build
