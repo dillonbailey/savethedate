@@ -1,6 +1,6 @@
-# - name: setup
-#   service: app
-#   command: yarn
+- name: setup
+  service: app
+  command: true
 
 # - name: build
 #   service: app
