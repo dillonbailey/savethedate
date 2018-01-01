@@ -1,19 +1,19 @@
-- name: setup
-  service: app
-  command: yarn
-
-- name: build
-  service: app
-  command: yarn blendid build
-
-# - name: list build files
+# - name: setup
 #   service: app
-#   command: ls -la
+#   command: yarn
+
+# - name: build
+#   service: app
+#   command: yarn blendid build
+
+- name: list build files
+  service: app
+  command: ls -la
 
 # - name: list files
 #   service: awsdeployment
 #   command: ls -la /app
 
-- name: deploy
-  service: awsdeployment
-  command: aws s3 sync /app/public s3://static-deploy-test
+# - name: deploy
+#   service: awsdeployment
+#   command: aws s3 sync /app/public s3://static-deploy-test

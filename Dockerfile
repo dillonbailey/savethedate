@@ -12,4 +12,4 @@ COPY . .
 
 # whether or not we run this here, we still have to run it in
 # codeship-steps.yml, otherwise it will not persist?
-# RUN yarn blendid build
+RUN yarn blendid build
